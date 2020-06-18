@@ -30,7 +30,7 @@ const UpdateMovie = (props) => {
       stars: movie.stars.filter((item) => item !== itemName),
     });
   };
-
+  // this will allow you to add a star to the current list
   const starAddHandle = (e) => {
     e.preventDefault();
     setMovie({
@@ -42,7 +42,7 @@ const UpdateMovie = (props) => {
   const starToAddHandle = (e) => {
     setStarToAdd(e.target.value);
   };
-
+  // grabbing api data by unique ID
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
@@ -50,6 +50,8 @@ const UpdateMovie = (props) => {
       .catch((err) => console.log(err.response));
   }, []);
 
+  //the PUT method to change a resource’s information.
+  //  PUT takes in a body object like POST and identifies data that needs to be updated somewhere.
   const handlePut = (e) => {
     e.preventDefault();
     axios

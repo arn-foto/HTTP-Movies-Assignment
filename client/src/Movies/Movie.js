@@ -36,7 +36,7 @@ export default class Movie extends React.Component {
     e.preventDefault();
     this.props.history.push(`/update-movie/${this.state.movie.id}`);
   };
-
+  // added axios delete request, it will deleted a movie by their specific ID
   deleteMovie = (e) => {
     e.preventDefault();
 
