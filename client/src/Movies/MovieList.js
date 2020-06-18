@@ -11,7 +11,7 @@ export default class MovieList extends Component {
       movies: [],
     };
   }
-  //create axios get request
+  //moved axios get request from App.js
   componentDidMount() {
     axios
       .get("http://localhost:5000/api/movies")
