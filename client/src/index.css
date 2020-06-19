@@ -6,13 +6,16 @@ body {
 }
 
 .movie-card {
-  background-color: #fff;
-  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightcyan;
+  border: 3;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
-  position: relative;
+
   margin: 1rem auto;
 }
 
@@ -22,7 +25,6 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
@@ -59,10 +61,10 @@ body {
   right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: pink;
 }
 .save-button:hover {
-  background-color: green;
+  background-color: rgb(132, 198, 214);
   color: white;
 }
 
@@ -74,4 +76,19 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.new-button {
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 10px;
 }
